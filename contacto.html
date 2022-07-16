@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="stylesheet" type="text/css" href="miestilo.css">
+	<title> Contacto </title>
+</head>
+ <body>
+
+ <nav>
+    <header>
+
+   
+      <ul class="nav_link">
+      
+       <li> <a href="index.html"> Inicio </li> </a>
+      
+       <li> <a href="Llamados.html"> Cantos </li> </a>
+    
+     <li> <a href="clasificacion.html"> Clasificación </li> </a>
+    
+     <li> <a href="lista.html"> Definiciones </li> </a> 
+    
+    </ul>
+
+</header>
+</nav>
+   
+  
+  <div class="contenedor">
+  
+   <form action="https://formsubmit.co/ledrycheto124@gmail.com" method="POST">
+    
+    <h3 align="center"> ENVÍANOS UN MENSAJE </h3>
+    
+    <input type="text" id="name" placeholder="Ingrese su nombre" required>
+    
+    <input type="email" id="email" placeholder="Ingrese su E-mail" required>
+    
+    <input type="text" id="phone" placeholder="Ingrese su número de télefono" required> 
+    
+    <textarea id="message" rows="4" placeholder=" ¿Como podemos ayudarte?"></textarea>
+    
+    <button type="submit"> Enviar </button>
+   
+   </form>
+  
+  </div> 
+
+<script src="https://smtpjs.com/v3/smtp.js"> </script>
+  
+  <script>
+  
+  	 function sendEmail() {
+    
+    Email.send ({
+    Host : "smtp.gmail.com",
+    Username : "leandrocheto124453@gmail.com",
+    Password : "vivalanaturaleza",
+    To : 'ledrycheto124@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : " New Contact Form Enquiry ",
+    Body : "And this is the body"
+
+    }).then(
+    message => alert( "El mensaje se envió correctamente :D")
+    );
+}
+   
+  </script>
+
+ </body>
+</html>
